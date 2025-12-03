@@ -1,0 +1,130 @@
+artifacts:
+  data:
+    hash: d264601559ffb36d3da1433573df5423
+    size: 17592389
+    uri: model
+call_orders:
+  predict:
+  - - model
+    - predict
+  predict_proba:
+  - - model
+    - predict_proba
+object_type: model
+processors:
+  model:
+    methods:
+      predict:
+        args:
+        - name: X
+          type_:
+            columns:
+            - ''
+            - Breed
+            - Sex
+            - Age
+            - Weight_lbs
+            - SpayNeuter_Status
+            - Daily_Activity_Level
+            - Diet
+            - Food_Brand
+            - Daily_Walk_Distance_miles
+            - Other_Pets_in_Household
+            - Medications
+            - Seizures
+            - Hours_of_Sleep
+            - Play_Time_hrs
+            - Owner_Activity_Level
+            - Annual_Vet_Visits
+            - Average_Temperature_F
+            dtypes:
+            - int64
+            - object
+            - object
+            - float64
+            - float64
+            - object
+            - object
+            - object
+            - object
+            - float64
+            - object
+            - object
+            - object
+            - float64
+            - float64
+            - object
+            - float64
+            - float64
+            index_cols:
+            - ''
+            type: dataframe
+        name: predict
+        returns:
+          dtype: object
+          shape:
+          - null
+          type: ndarray
+        varkw: params
+      predict_proba:
+        args:
+        - name: X
+          type_:
+            columns:
+            - ''
+            - Breed
+            - Sex
+            - Age
+            - Weight_lbs
+            - SpayNeuter_Status
+            - Daily_Activity_Level
+            - Diet
+            - Food_Brand
+            - Daily_Walk_Distance_miles
+            - Other_Pets_in_Household
+            - Medications
+            - Seizures
+            - Hours_of_Sleep
+            - Play_Time_hrs
+            - Owner_Activity_Level
+            - Annual_Vet_Visits
+            - Average_Temperature_F
+            dtypes:
+            - int64
+            - object
+            - object
+            - float64
+            - float64
+            - object
+            - object
+            - object
+            - object
+            - float64
+            - object
+            - object
+            - object
+            - float64
+            - float64
+            - object
+            - float64
+            - float64
+            index_cols:
+            - ''
+            type: dataframe
+        name: predict_proba
+        returns:
+          dtype: float64
+          shape:
+          - null
+          - 2
+          type: ndarray
+        varkw: params
+    type: sklearn_pipeline
+requirements:
+- module: numpy
+  version: 2.2.6
+- module: pandas
+  version: 2.2.2
+- module: sklearn
+  package_name: scikit-learn
+  version: 1.5.2
