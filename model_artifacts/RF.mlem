@@ -1,7 +1,7 @@
 artifacts:
   data:
-    hash: d264601559ffb36d3da1433573df5423
-    size: 17592389
+    hash: fc2c6efa99ccfe1bc7f22b3c331a32e1
+    size: 17592240
     uri: RF
 call_orders:
   predict:
